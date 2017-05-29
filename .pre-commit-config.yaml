@@ -1,0 +1,15 @@
+-   repo: git://github.com/pre-commit/pre-commit-hooks
+    sha: a11d9314b22d8f8c7556443875b731ef05965464
+    hooks:
+    -   id: check-case-conflict
+    -   id: check-merge-conflict
+    -   id: check-symlinks
+    -   id: detect-private-key
+-   repo: git://github.com/detailyang/pre-commit-shell
+    sha: 75af325c913743d7abf2ff6fd71dfbf9490bd8b4
+    hooks:
+    -   id: shell-lint
+-   repo: git://github.com/luminopia/pre-commit-hooks
+    sha: v0.0.5
+    hooks:
+    -   id: enforce-action-comments

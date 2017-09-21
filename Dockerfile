@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y \
     python=2.7.9-1 \
     python-dev=2.7.9-1 \
     python-pip=1.5.6-5 \
+    rsync \
     shellcheck=0.3.4-3 \
     unzip=6.0-16+deb8u3
 

@@ -1,4 +1,4 @@
-FROM node:6.10.2
+FROM node:8.9.4
 
 # Install required packages available from the Debian repo
 # NOTE: output isn't cleaned up so base images can easily run install again w/o
@@ -24,7 +24,7 @@ RUN curl https://releases.hashicorp.com/terraform/0.9.6/terraform_0.9.6_linux_am
 
 # Install git lfs
 RUN curl https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh > /root/git-lfs-installer.sh \
-    && echo "be7eb90243b46e01201c0ed7055c54fcf25c5832272d8da3d2aa54b3ab6c1f00  /root/git-lfs-installer.sh" | sha256sum -c - \
+    && echo "513e12c1614c801ff7c37ce5011116f8b4f36031037f3220625ec005d225f30c /root/git-lfs-installer.sh" | sha256sum -c - \
     && chmod a+x /root/git-lfs-installer.sh \
     && /root/git-lfs-installer.sh \
     && apt-get install git-lfs \

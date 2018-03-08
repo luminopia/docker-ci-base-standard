@@ -4,17 +4,17 @@ FROM node:8.9.4
 # NOTE: output isn't cleaned up so base images can easily run install again w/o
 # needing to run `apt-get update`
 RUN apt-get update && apt-get install -y \
-    python=2.7.9-1 \
-    python-dev=2.7.9-1 \
-    python-pip=1.5.6-5 \
+    python \
+    python-dev \
+    python-pip \
     rsync \
-    shellcheck=0.3.4-3 \
-    unzip=6.0-16+deb8u3
+    shellcheck \
+    unzip
 
 # Install pip based packages
 RUN pip install \
-    pre-commit==0.14.0 \
-    awscli==1.11.93
+    pre-commit \
+    awscli==1.14.52
 
 # Install terraform
 RUN curl https://releases.hashicorp.com/terraform/0.9.6/terraform_0.9.6_linux_amd64.zip > /root/terraform.zip \
